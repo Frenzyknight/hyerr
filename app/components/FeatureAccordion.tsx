@@ -1,22 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
 type Feature = {
   number: string;
   title: string;
   label: string;
-  body: string;
+  body: ReactNode;
   image: string;
   alt: string;
 };
+
+const Highlight = ({ children }: { children: ReactNode }) => (
+  <span className="font-medium text-[#b69cff]">{children}</span>
+);
 
 const features: Feature[] = [
   {
     number: "01",
     title: "EV-First, Cost-Efficient Fleet",
     label: "EV-First Fleet",
-    body: "An all-electric fleet because the math simply works better. A fraction of the fuel cost of petrol cabs, far lower maintenance, and zero tailpipe emissions. Lower running costs mean higher driver take-home pay and fairer fares for riders.",
+    body: (
+      <>
+        An all-electric fleet because the math simply works better. A fraction
+        of the fuel cost of petrol cabs, far lower maintenance, and{" "}
+        <Highlight>zero tailpipe emissions</Highlight>. Lower running costs mean{" "}
+        <Highlight>higher driver take-home pay</Highlight> and fairer fares for
+        riders.
+      </>
+    ),
     image: "/ev-first.webp",
     alt: "A modern electric vehicle in a green, sustainable setting",
   },
@@ -24,7 +36,14 @@ const features: Feature[] = [
     number: "02",
     title: "Rent-to-Own for Drivers",
     label: "Rent-to-Own",
-    body: "Every driver has a path to owning their vehicle. A portion of trip earnings is set aside toward ownership, so drivers move from operator to owner over time. The cab becomes an income-generating asset, not a debt trap.",
+    body: (
+      <>
+        Every driver has a <Highlight>path to owning their vehicle</Highlight>. A
+        portion of trip earnings is set aside toward ownership, so drivers move
+        from operator to owner over time. The cab becomes an{" "}
+        <Highlight>income-generating asset</Highlight>, not a debt trap.
+      </>
+    ),
     image: "/rent-to-own.webp",
     alt: "A smiling HyerrFleet driver behind the wheel",
   },
@@ -32,7 +51,14 @@ const features: Feature[] = [
     number: "03",
     title: "Reliable Charging, Zero Downtime",
     label: "Reliable Charging",
-    body: "Charging partnerships are built into the core of the model. Drivers get priority access and subsidised rates across a growing network, so they always know where and when to charge. No range anxiety, no lost earning hours.",
+    body: (
+      <>
+        Charging partnerships are built into the core of the model. Drivers get{" "}
+        <Highlight>priority access and subsidised rates</Highlight> across a
+        growing network, so they always know where and when to charge.{" "}
+        <Highlight>No range anxiety</Highlight>, no lost earning hours.
+      </>
+    ),
     image: "/charging-infra.webp",
     alt: "A row of EV charging stations at sunset",
   },
@@ -40,7 +66,14 @@ const features: Feature[] = [
     number: "04",
     title: "Built for Sustainability",
     label: "Sustainability",
-    body: "Every ride avoids real carbon. An estimated 3 to 4 tonnes of CO₂ per vehicle each year versus a petrol equivalent. As we scale toward thousands of vehicles, that impact compounds across the city’s air and noise.",
+    body: (
+      <>
+        Every ride avoids real carbon. An estimated{" "}
+        <Highlight>3 to 4 tonnes of CO₂ per vehicle each year</Highlight> versus
+        a petrol equivalent. As we scale toward thousands of vehicles, that{" "}
+        <Highlight>impact compounds</Highlight> across the city’s air and noise.
+      </>
+    ),
     image: "/sustainability.webp",
     alt: "An electric car surrounded by greenery, symbolising sustainability",
   },
