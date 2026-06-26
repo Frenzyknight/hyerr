@@ -48,7 +48,7 @@ export default function SustainabilityReveal() {
               with the base word and the forest stays anchored to the screen. */}
           <div className="absolute left-1/2 top-1/2 h-screen w-screen -translate-x-1/2 -translate-y-1/2">
             <img
-              src="/forest.jpeg"
+              src="/forest.webp"
               alt="Aerial view of a dense green forest canopy"
               className="absolute inset-0 h-full w-full object-cover"
             />

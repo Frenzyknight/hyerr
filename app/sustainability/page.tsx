@@ -10,7 +10,7 @@ const sustainabilitySlides = [
     title: "Always",
     emphasis: "Electric",
     caption: "100% EV fleet — maintained forever, no hybrid fallback.",
-    image: "/fleet.jpeg",
+    image: "/fleet.webp",
     alt: "A row of electric cabs charging at a depot",
   },
   {
@@ -18,21 +18,21 @@ const sustainabilitySlides = [
     emphasis: "Reported",
     caption:
       "Annual sustainability impact report — published once we hit operational scale.",
-    image: "/report.jpeg",
+    image: "/report.webp",
     alt: "Team reviewing a printed sustainability report",
   },
   {
     title: "Powered by",
     emphasis: "Sunlight",
     caption: "Solar-assisted charging exploration at partner stations.",
-    image: "/solar-charging.jpeg",
+    image: "/solar-charging.webp",
     alt: "EVs charging beneath a solar-panel canopy",
   },
   {
     title: "Offset &",
     emphasis: "Credited",
     caption: "Carbon credit programme — as the fleet qualifies.",
-    image: "/carbon-credit.jpeg",
+    image: "/carbon-credit.webp",
     alt: "A hand exchanging money for a seedling in a pot",
   },
   {
@@ -40,7 +40,7 @@ const sustainabilitySlides = [
     emphasis: "Air",
     caption:
       "Ahmedabad is one of India's most polluted cities. High-utilisation EV cabs on busy routes create outsized impact.",
-    image: "/pollution.jpeg",
+    image: "/pollution.webp",
     alt: "Dense traffic on a busy Ahmedabad road",
   },
 ];
@@ -83,7 +83,7 @@ export default function SustainabilityPage() {
             <figure className="lg:absolute lg:left-0 lg:top-0 lg:w-[42%]">
               <div className="aspect-4/3 w-full overflow-hidden rounded-3xl bg-mist">
                 <img
-                  src="/woman-over-car.jpg"
+                  src="/woman-over-car.webp"
                   alt="A traveller resting on the roof of a car beneath wind turbines"
                   className="h-full w-full object-cover"
                 />
@@ -103,7 +103,7 @@ export default function SustainabilityPage() {
             <figure className="lg:absolute lg:right-0 lg:top-[160px] lg:w-[50%]">
               <div className="aspect-4/3 w-full overflow-hidden rounded-3xl bg-mist">
                 <img
-                  src="/solar-panel.jpeg"
+                  src="/solar-panel.webp"
                   alt="Rows of solar panels in green farmland at golden hour"
                   className="h-full w-full object-cover"
                 />

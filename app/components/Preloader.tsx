@@ -8,11 +8,11 @@ import { AnimatePresence, motion } from "motion/react";
 // it (plus a few key landing images) so the page is fully painted before the
 // curtain lifts.
 const FRAME_COUNT = 237;
-const framePath = (i: number) => `/frame_${String(i).padStart(4, "0")}.png`;
+const framePath = (i: number) => `/frame_${String(i).padStart(4, "0")}.webp`;
 
 const EXTRA_IMAGES = [
   "/Section 2 - Some journeys take.svg",
-  "/hyerr-logo-text-white.png",
+  "/hyerr-logo-text-white.webp",
 ];
 
 const MIN_DURATION = 2200; // ms — the counter never finishes faster than this
@@ -142,7 +142,7 @@ export default function Preloader({ onReveal }: { onReveal: () => void }) {
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               >
                 <Image
-                  src="/hyerr-logo-text-white.png"
+                  src="/hyerr-logo-text-white.webp"
                   alt="Hyerr"
                   width={280}
                   height={80}

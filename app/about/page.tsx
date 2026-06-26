@@ -64,7 +64,7 @@ export default function AboutPage() {
 
         {/*
           ---------- Split image ----------
-          A single image (about-us-hero.jpeg) rendered as two windows onto the
+          A single image (about-us-hero.webp) rendered as two windows onto the
           same picture. Each window holds an <img> sized to the full row and
           anchored to the row's edges, so both reveal the same scaled image with
           a thin gap between them — one continuous photo split into two boxes.
@@ -73,7 +73,7 @@ export default function AboutPage() {
           {/* Left box — shorter, bottom-aligned, shows the left portion */}
           <div className="absolute bottom-0 left-0 h-[62%] w-[31%] overflow-hidden rounded-3xl">
             <img
-              src="/about-us-hero.jpeg"
+              src="/about-us-hero.webp"
               alt="The HyerrFleet team collaborating"
               className="absolute bottom-0 left-0 h-[161.29%] w-[322.58%] max-w-none object-cover"
             />
@@ -82,7 +82,7 @@ export default function AboutPage() {
           {/* Right box — full height, shows the right portion */}
           <div className="absolute bottom-0 right-0 h-full w-[65%] overflow-hidden rounded-3xl">
             <img
-              src="/about-us-hero.jpeg"
+              src="/about-us-hero.webp"
               alt=""
               aria-hidden="true"
               className="absolute bottom-0 right-0 h-full w-[153.85%] max-w-none object-cover"

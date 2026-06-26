@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
 
         <Image
-          src="/hyerr-logo-text-white.png"
+          src="/hyerr-logo-text-white.webp"
           alt="Hyerr"
           width={140}
           height={40}

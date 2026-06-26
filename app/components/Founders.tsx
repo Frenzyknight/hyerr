@@ -13,7 +13,7 @@ const founders: Founder[] = [
     name: "Ayush Gupta",
     role: "Founder & CEO",
     body: "Ayush is the driving force behind HyerrFleet’s vision. An entrepreneur at heart, he identified a gap that most overlooked: that the real problem in India’s cab economy isn’t just pollution, it’s the economic trap drivers are stuck in. He built HyerrFleet from the ground up to solve both simultaneously. Ayush leads the company’s strategy, fundraising, and product direction, with a relentless focus on making EV mobility accessible, scalable, and driver-first.",
-    image: "/ayush.jpeg",
+    image: "/ayush.webp",
     alt: "Ayush Gupta, Founder & CEO of HyerrFleet",
   },
   {
@@ -21,7 +21,7 @@ const founders: Founder[] = [
     name: "Mukesh Bohra",
     role: "Co-Founder & Strategic Partner",
     body: "Mukesh brings deep, hands-on expertise in fleet operations to HyerrFleet. His understanding of how fleets actually run, from the logistics and driver relationships to the ground-level challenges, gives HyerrFleet an operational edge that most startups lack from day one. Mukesh oversees fleet strategy and partnerships, ensuring that what HyerrFleet promises on paper actually delivers on the road.",
-    image: "/mukesh.jpeg",
+    image: "/mukesh.webp",
     alt: "Mukesh Bohra, Co-Founder & Strategic Partner of HyerrFleet",
   },
 ];

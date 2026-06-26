@@ -14,7 +14,7 @@ import { useIntroComplete } from "./IntroProvider";
 // Scroll-scrubbed image sequence (frames extracted from the POV drive footage).
 const FRAME_COUNT = 237;
 const framePath = (i: number) =>
-  `/frame_${String(i).padStart(4, "0")}.png`;
+  `/frame_${String(i).padStart(4, "0")}.webp`;
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);

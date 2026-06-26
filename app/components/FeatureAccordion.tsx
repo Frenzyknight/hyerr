@@ -25,7 +25,7 @@ const features: Feature[] = [
     title: "Rent-to-Own for Drivers",
     label: "Rent-to-Own",
     body: "Every driver has a path to owning their vehicle. A portion of trip earnings is set aside toward ownership, so drivers move from operator to owner over time. The cab becomes an income-generating asset, not a debt trap.",
-    image: "/rent-to-own.jpeg",
+    image: "/rent-to-own.webp",
     alt: "A smiling HyerrFleet driver behind the wheel",
   },
   {
@@ -33,7 +33,7 @@ const features: Feature[] = [
     title: "Reliable Charging, Zero Downtime",
     label: "Reliable Charging",
     body: "Charging partnerships are built into the core of the model. Drivers get priority access and subsidised rates across a growing network, so they always know where and when to charge. No range anxiety, no lost earning hours.",
-    image: "/charging-infra.jpeg",
+    image: "/charging-infra.webp",
     alt: "A row of EV charging stations at sunset",
   },
   {
@@ -41,7 +41,7 @@ const features: Feature[] = [
     title: "Built for Sustainability",
     label: "Sustainability",
     body: "Every ride avoids real carbon. An estimated 3 to 4 tonnes of CO₂ per vehicle each year versus a petrol equivalent. As we scale toward thousands of vehicles, that impact compounds across the city’s air and noise.",
-    image: "/sustainability.jpg",
+    image: "/sustainability.webp",
     alt: "An electric car surrounded by greenery, symbolising sustainability",
   },
 ];
