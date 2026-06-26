@@ -38,7 +38,7 @@ const defaultSlides: Slide[] = [
     title: "Arrive",
     emphasis: "Ready",
     caption: "For whatever comes next",
-    image: "/Frame 95 (1).webp",
+    image: "/driver-family.webp",
     alt: "Family enjoying a ride together",
   },
 ];
