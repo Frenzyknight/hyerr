@@ -22,13 +22,13 @@ export default function SustainabilityReveal() {
   const pillRadius = useTransform(scrollYProgress, [0.65, 1], [9999, 0]);
 
   const wordClass =
-    "select-none font-sans font-semibold tracking-tight text-[clamp(3rem,12vw,11rem)] leading-none";
+    "select-none font-display font-semibold tracking-tight text-[clamp(3rem,12vw,11rem)] leading-none";
 
   return (
     <section ref={containerRef} className="relative h-[160vh] w-full">
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden bg-white">
         {/* Section index marker */}
-        <span className="absolute right-6 top-6 z-30 font-sans text-sm tracking-wide text-lilac sm:right-10 sm:top-10">
+        <span className="absolute right-6 top-6 z-30 font-display text-sm tracking-wide text-lilac sm:right-10 sm:top-10">
           02<span className="text-grape">/</span>
         </span>
 

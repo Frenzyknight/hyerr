@@ -8,7 +8,7 @@
   --color-fog: #e9e7ed;
   --color-ink: #1e124f;
 
-  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-gillune), Georgia, "Times New Roman", serif;
   --font-display: var(--font-gillune), Georgia, "Times New Roman", serif;
 }
 
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
 }
 
 .font-display {

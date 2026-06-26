@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import IntroProvider from "./components/IntroProvider";
-
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const gillune = localFont({
   variable: "--font-gillune",
@@ -45,7 +38,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${gillune.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
+      className={`${gillune.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cloud text-ink">
         <IntroProvider>{children}</IntroProvider>
