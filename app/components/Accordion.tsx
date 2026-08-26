@@ -49,11 +49,11 @@ export default function Accordion() {
               type="button"
               onClick={() => setOpen(i)}
               aria-expanded={isOpen}
-              className={`flex w-full items-center px-8 pt-8 text-left ${
-                isOpen || i === items.length - 1 ? "pb-8" : "pb-15"
+              className={`flex w-full items-center px-6 pt-7 text-left sm:px-8 sm:pt-8 ${
+                isOpen || i === items.length - 1 ? "pb-7 sm:pb-8" : "pb-14 sm:pb-15"
               }`}
             >
-              <span className="text-2xl font-semibold tracking-tight text-[#18181B] sm:text-[28px]">
+              <span className="text-xl font-semibold tracking-tight text-[#18181B] sm:text-2xl md:text-[28px]">
                 {item.title}
               </span>
             </button>
@@ -64,8 +64,8 @@ export default function Accordion() {
             >
               <div className="overflow-hidden">
                 <p
-                  className={`px-8 text-xl leading-relaxed text-[#52525B] sm:text-2xl ${
-                    i === items.length - 1 ? "pb-9" : "pb-14"
+                  className={`px-6 text-base leading-relaxed text-[#52525B] sm:px-8 sm:text-xl md:text-2xl ${
+                    i === items.length - 1 ? "pb-8 sm:pb-9" : "pb-13 sm:pb-14"
                   }`}
                 >
                   {item.body}

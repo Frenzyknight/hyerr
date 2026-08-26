@@ -62,7 +62,7 @@ export default function Carousel({
     <div className="mx-auto grid w-full max-w-360 items-start gap-10 px-4 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.25fr)] md:items-stretch md:gap-12 lg:px-6">
       <div className="order-2 flex h-full flex-col justify-between md:order-1">
         <div>
-          <h2 className="font-display font-normal text-[56px] leading-[1.05] text-[#18181B]">
+          <h2 className="font-display font-normal text-[36px] leading-[1.05] text-[#18181B] sm:text-[44px] lg:text-[56px]">
             {animateTitle ? (
               <AnimatePresence mode="wait">
                 <motion.span
@@ -94,13 +94,13 @@ export default function Carousel({
               exit={{ y: "-120%", opacity: 0 }}
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               mainClassName="inline-flex italic text-grape leading-[1.05]"
-              splitLevelClassName="overflow-hidden pb-3 pr-2"
+              splitLevelClassName="overflow-hidden pb-2 pr-2 sm:pb-3"
             />
           </h2>
           <AnimatePresence mode="wait">
             <motion.p
               key={active}
-              className="mt-6 max-w-md text-[32px] leading-snug text-[#18181B]"
+              className="mt-5 max-w-md text-[19px] leading-snug text-[#18181B] sm:mt-6 sm:text-[24px] lg:text-[32px]"
               initial={{ clipPath: "inset(0 100% 0 0)" }}
               animate={{ clipPath: "inset(0 0% 0 0)" }}
               exit={{ clipPath: "inset(0 100% 0 0)" }}

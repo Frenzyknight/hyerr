@@ -21,8 +21,9 @@ export default function SustainabilityReveal() {
   const pillHeight = useTransform(scrollYProgress, [0, 0.9], ["34vh", "180vh"]);
   const pillRadius = useTransform(scrollYProgress, [0.65, 1], [9999, 0]);
 
+  // Capped at 11vw so the full word still clears the gutters on a 375px phone.
   const wordClass =
-    "select-none font-display font-semibold tracking-tight text-[clamp(3rem,12vw,11rem)] leading-none";
+    "select-none font-display font-semibold tracking-tight text-[clamp(2rem,11vw,11rem)] leading-none";
 
   return (
     <section ref={containerRef} className="relative h-[160vh] w-full">

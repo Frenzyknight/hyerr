@@ -29,12 +29,12 @@ const founders: Founder[] = [
 export default function Founders() {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto flex w-full max-w-360 flex-col gap-16 px-4 py-24 md:gap-24 md:py-32 lg:px-6">
+      <div className="mx-auto flex w-full max-w-360 flex-col gap-12 px-4 py-20 md:gap-24 md:py-32 lg:px-6">
         <h2 className="text-center font-display font-normal text-[40px] leading-[1.05] text-[#18181B] sm:text-[52px] lg:text-[64px]">
           Meet the <span className="italic text-grape">Founders</span>
         </h2>
 
-        <div className="flex flex-col gap-20 md:gap-28">
+        <div className="flex flex-col gap-16 md:gap-28">
           {founders.map((founder, i) => {
             const imageFirst = i % 2 === 1;
             return (
@@ -57,21 +57,21 @@ export default function Founders() {
 
                 {/* Copy */}
                 <div
-                  className={`flex items-start gap-6 sm:gap-8 ${
+                  className={`flex items-start gap-4 sm:gap-6 md:gap-8 ${
                     imageFirst ? "md:order-2" : "md:order-1"
                   }`}
                 >
-                  <span className="font-display text-5xl leading-none text-grape/30 sm:text-6xl">
+                  <span className="font-display text-4xl leading-none text-grape/30 sm:text-5xl md:text-6xl">
                     {founder.number}
                   </span>
                   <div>
-                    <h3 className="font-display font-normal text-[32px] leading-tight text-[#18181B] sm:text-[40px]">
+                    <h3 className="font-display font-normal text-[28px] leading-tight text-[#18181B] sm:text-[32px] md:text-[40px]">
                       {founder.name}
                     </h3>
-                    <p className="mt-1 text-lg italic text-lilac sm:text-xl">
+                    <p className="mt-1 text-base italic text-lilac sm:text-lg md:text-xl">
                       {founder.role}
                     </p>
-                    <p className="mt-5 max-w-md text-base leading-relaxed text-[#52525B] sm:text-lg">
+                    <p className="mt-4 max-w-md text-base leading-relaxed text-[#52525B] sm:mt-5 sm:text-lg">
                       {founder.body}
                     </p>
                   </div>

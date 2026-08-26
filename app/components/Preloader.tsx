@@ -3,17 +3,18 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
+import { HERO_VIDEO_SRC } from "./Hero";
 
-// The heavy hero asset is the scroll-scrubbed POV frame sequence — we wait for
-// it (plus a few key landing images) so the page is fully painted before the
-// curtain lifts.
-const FRAME_COUNT = 237;
-const framePath = (i: number) => `/frame_${String(i).padStart(4, "0")}.webp`;
-
+// The heavy hero asset is the looping POV footage — we wait for it (plus a few
+// key landing images) so the page is fully painted before the curtain lifts.
 const EXTRA_IMAGES = [
   "/Section 2 - Some journeys take.svg",
   "/hyerr-logo-text-white.webp",
 ];
+
+// The video dwarfs the images in size, so it carries most of the progress bar.
+const VIDEO_WEIGHT = 8;
+const VIDEO_MAX_WAIT = 6000; // ms — never block the reveal longer than this
 
 const MIN_DURATION = 2200; // ms — the counter never finishes faster than this
 const LOGO_HOLD = 1000; // ms — the logo lingers before the curtain lifts
@@ -26,17 +27,13 @@ export default function Preloader({ onReveal }: { onReveal: () => void }) {
   const [active, setActive] = useState(true);
   const revealed = useRef(false);
 
-  // Preload every image and drive the counter from real load progress, while
+  // Preload every asset and drive the counter from real load progress, while
   // enforcing a minimum on-screen duration so it always feels deliberate.
   useEffect(() => {
-    const urls = [
-      ...Array.from({ length: FRAME_COUNT }, (_, i) => framePath(i + 1)),
-      ...EXTRA_IMAGES,
-    ];
-    const total = urls.length;
+    const total = EXTRA_IMAGES.length + VIDEO_WEIGHT;
     let loaded = 0;
 
-    urls.forEach((src) => {
+    EXTRA_IMAGES.forEach((src) => {
       const img = new window.Image();
       const done = () => {
         loaded += 1;
@@ -45,6 +42,23 @@ export default function Preloader({ onReveal }: { onReveal: () => void }) {
       img.onerror = done;
       img.src = src;
     });
+
+    // `canplaythrough` isn't guaranteed to fire on every browser/connection, so
+    // a hard cap makes sure the curtain always lifts.
+    let videoSettled = false;
+    const videoDone = () => {
+      if (videoSettled) return;
+      videoSettled = true;
+      loaded += VIDEO_WEIGHT;
+    };
+    const videoCap = setTimeout(videoDone, VIDEO_MAX_WAIT);
+
+    const video = document.createElement("video");
+    video.addEventListener("canplaythrough", videoDone, { once: true });
+    video.addEventListener("error", videoDone, { once: true });
+    video.preload = "auto";
+    video.muted = true;
+    video.src = HERO_VIDEO_SRC;
 
     const start = performance.now();
     let displayed = 0;
@@ -70,7 +84,10 @@ export default function Preloader({ onReveal }: { onReveal: () => void }) {
     };
 
     raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(videoCap);
+    };
   }, []);
 
   // Hold on the logo, then reveal the page and lift the curtain together.

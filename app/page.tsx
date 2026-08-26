@@ -49,20 +49,20 @@ export default function Home() {
       </section>
 
       {/* ---------- Arrive Composed (carousel) ---------- */}
-      <section className="relative z-10 w-full overflow-hidden bg-cloud py-42 md:py-42">
+      <section className="relative z-10 w-full overflow-hidden bg-cloud py-20 md:py-32 lg:py-42">
         <Carousel />
       </section>
 
       {/* ---------- Built Around The Journey (accordion) ---------- */}
-      <section className="w-full bg-mist py-42 md:py-42">
-        <div className="mx-auto grid w-full max-w-360 items-start gap-12 px-4 md:grid-cols-2 md:gap-16 lg:px-6">
+      <section className="w-full bg-mist py-20 md:py-32 lg:py-42">
+        <div className="mx-auto grid w-full max-w-360 items-start gap-10 px-4 md:grid-cols-2 md:gap-16 lg:px-6">
           <div>
-            <h2 className="font-display font-normal text-[56px] leading-[1.05] text-[#18181B]">
+            <h2 className="font-display font-normal text-[36px] leading-[1.05] text-[#18181B] sm:text-[44px] lg:text-[56px]">
               Built Around
               <br />
               <span className="italic text-grape">The Journey</span>
             </h2>
-            <p className="mt-6 max-w-xl text-[32px] leading-relaxed text-[#18181B]">
+            <p className="mt-5 max-w-xl text-[20px] leading-relaxed text-[#18181B] sm:mt-6 sm:text-[24px] lg:text-[32px]">
               Hyerr is a journey-first, EV-powered mobility system designed for
               how drives should feel for the people and the world they move
               through.

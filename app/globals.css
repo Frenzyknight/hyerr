@@ -12,10 +12,6 @@
   --font-display: var(--font-gillune), Georgia, "Times New Roman", serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--font-display);
 }

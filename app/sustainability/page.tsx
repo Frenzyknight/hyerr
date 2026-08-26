@@ -76,9 +76,9 @@ export default function SustainabilityPage() {
 
       {/* ---------- Diagonal image composition ---------- */}
       <section className="w-full bg-white">
-        <div className="mx-auto w-full max-w-360 px-4 py-16 md:py-24 lg:px-6">
+        <div className="mx-auto w-full max-w-360 px-4 py-14 md:py-24 lg:px-6">
           {/* Mobile: simple stack. Desktop: offset diagonal layout. */}
-          <div className="flex flex-col gap-12 lg:relative lg:block lg:h-[680px]">
+          <div className="flex flex-col gap-10 lg:relative lg:block lg:h-[680px]">
             {/* Left image + quote */}
             <figure className="lg:absolute lg:left-0 lg:top-0 lg:w-[42%]">
               <div className="aspect-4/3 w-full overflow-hidden rounded-3xl bg-mist">
@@ -126,7 +126,7 @@ export default function SustainabilityPage() {
               <br />
               <span className="italic text-grape">Always.</span>
             </h2>
-            <p className="mt-6 max-w-2xl text-[20px] leading-snug text-[#18181B] sm:text-[24px] lg:text-[28px]">
+            <p className="mt-5 max-w-2xl text-[18px] leading-snug text-[#18181B] sm:mt-6 sm:text-[24px] lg:text-[28px]">
               100% EV fleet. No petrol. No diesel. No exceptions. One EV cab
               running daily eliminates approximately 3–4 tonnes of CO₂ per year
               compared to a petrol cab.
@@ -185,7 +185,7 @@ export default function SustainabilityPage() {
       </section>
 
       {/* ---------- Our commitments (carousel) ---------- */}
-      <section className="relative z-10 w-full overflow-hidden bg-cloud py-42 md:py-42">
+      <section className="relative z-10 w-full overflow-hidden bg-cloud py-20 md:py-32 lg:py-42">
         <Carousel slides={sustainabilitySlides} animateTitle />
       </section>
 
